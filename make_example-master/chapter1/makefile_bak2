@@ -1,0 +1,15 @@
+#this is a makefile example
+deepen=clean main.o testa testb
+main:$(deepen)
+	gcc -o main main.o
+
+main.o:main.c
+	gcc -c main.c
+
+testa:
+	touch testa
+
+testb:
+	touch testb
+clean:
+	rm main.o testa testb
